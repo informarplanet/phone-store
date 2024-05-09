@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.card-container{
+    width: 100vh;
+    display: flex;
+    margin: auto;
+    justify-content:center;
+    gap: 5px;
+    margin-top: 5px;
+    
+    
+}
+.card{
+    background-color: rgba(148, 0, 211, 0.314);
+    border-radius: 13px;
+    padding: 15px;
+
+}
+.heading{
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+    width: bold;
+    color: rgba(213, 68, 15, 0.595);
+}
+.details-btn{
+    width: 150px;
+    padding: 10px;
+    background-color: rgba(14, 99, 234, 0.686);
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    border: none;
+    outline: none;
+}
