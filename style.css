@@ -3,12 +3,13 @@
     margin: 0;
 }
 .card-container{
-    width: 100vh;
+    width:100%;
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     justify-content:center;
     gap: 5px;
-    margin-top: 5px;
+    margin-top: 15px;
     
     
 }
@@ -16,6 +17,7 @@
     background-color: rgba(148, 0, 211, 0.314);
     border-radius: 13px;
     padding: 15px;
+    margin-bottom: 15px;
 
 }
 .heading{
