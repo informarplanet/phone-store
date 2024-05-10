@@ -8,12 +8,23 @@ phonsData();
 
 const ShowPnones = (phones) => {
     // show data on page
+
     // get card container where put the card
     const cardContainer = document.getElementById('cardContainer');
     // clear the result
     cardContainer.textContent='';
 
-    phones.forEach(element => {     
+    const displayShowMore=document.getElementById('showMore');
+// display show more button
+    if(phones.length>10){
+        displayShowMore.removeAttribute('hidden')
+     }else{
+        displayShowMore.setAttribute('hidden','')
+     }
+
+    const phone= phones.slice(0,10)
+    
+    phone.forEach(element => {     
         // creat a dive
         const div = document.createElement('div');
         div.classList = 'card';
@@ -26,12 +37,14 @@ const ShowPnones = (phones) => {
             <button class="details-btn" type="submit"> Show Details</button>
         `;
         cardContainer.appendChild(div);
-        
     });
+    // hide loader
+    showloader(false);
 
 }
 
 document.getElementById('searchBtn').addEventListener('click', function (){
+    showloader(true);
     // Get input search value from id
     const searchfield = document.getElementById('searchFied');
     const searchValue = searchfield.value;
@@ -41,5 +54,16 @@ document.getElementById('searchBtn').addEventListener('click', function (){
     .then(res=> res.json())
     .then(data=> ShowPnones(data.data))
 });
+
+// show loader
+const showloader=(isLoading)=>{
+    const loader=document.getElementById('loderContainer')
+    if(isLoading){
+        loader.removeAttribute('hidden')
+    }else{
+        loader.setAttribute('hidden','')
+    }
+    
+}
 
 
