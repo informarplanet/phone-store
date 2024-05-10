@@ -95,10 +95,10 @@ const handleShowdetails=async(id)=>{
             <p class="py-4">displaySize : ${data.data?.mainFeatures?.displaySize}</p>
             <p class="py-4">memory : ${data.data?.mainFeatures?.memory}</p>
             <p class="py-4">storage : ${data.data?.mainFeatures?.storage}</p>
-            <p class="py-4">Bluetooth : ${data.data?.others?.Bluetooth}</p>
-            <p class="py-4">WLAN : ${data.data?.others?.WLAN} </p>
-            <p class="py-4">GPS : ${data.data?.others?.GPS}</p>
-            <p class="py-4">USB : ${data.data?.others?.USB}</p>
+            <p class="py-4">Bluetooth : ${data.data?.others?.Bluetooth || ' No blooth Available'}</p>
+            <p class="py-4">WLAN : ${data.data?.others?.WLAN || 'No WLAN Available'} </p>
+            <p class="py-4">GPS : ${data.data?.others?.GPS || 'No GPS Available'}</p>
+            <p class="py-4">USB : ${data.data?.others?.USB || 'No USB Available'}</p>
 
         </div>
     </dialog>
