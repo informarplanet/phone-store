@@ -58,12 +58,12 @@ document.getElementById('searchBtn').addEventListener('click', function () {
     // Get input search value from id
     const searchfield = document.getElementById('searchFied');
     const searchValue = searchfield.value;
-
+    // clear Search field
+    searchfield.value="";
     // Fetching data from the API
     fetch(`https://openapi.programming-hero.com/api/phones?search=${searchValue}`)
         .then(res => res.json())
         .then(data => ShowPnones(data.data))
-
 });
 
 // show loader
