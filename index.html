@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Store</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1 class="heading">Phone Store</h1>
@@ -13,25 +18,35 @@
     <main>
         <!-- Search section  -->
         <section class="search-container">
-            <input class="search-fied" type="text" placeholder="Search Items" id="searchFied">
-            <button  class="search-btn" id="searchBtn">Search</button>
+            <input class="search-fied" type="text" placeholder="Search Items" id="searchFied" required>
+            <button class="search-btn" id="searchBtn">Search</button>
         </section>
+
         <!-- loader  -->
         <section hidden id="loderContainer">
-            <div class="loader" ></div>
+            <div class="loader"></div>
         </section>
-        
+
         <!-- Phonee list -->
-        <section id="cardContainer" class="card-container">            
+        <section id="cardContainer" class="card-container">
+        </section>
+        <!-- not fount data  -->
+        <section id="datanotFoundcond" hidden class="notfound-container">
+            <p class="heading">No Items Found!! Please search Another</p>
+            <button type="submit" class="btn">Back to Home</button>
         </section>
         <!-- show more -->
-        <section class="show-more" id="showMore" hidden >
-            <button class="btn"  id="showMoreBtn">Show More</button>
+        <section class="show-more" id="showMore" hidden>
+            <button class="btn" id="showMoreBtn">Show More</button>
+        </section>
+        <!-- modal -->
+        <section id="modalBox">
+            <!-- You can open the modal using ID.showModal() method -->
+           
         </section>
     </main>
 
-
-
     <script src="js/index.js"></script>
 </body>
+
 </html>

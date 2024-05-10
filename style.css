@@ -22,7 +22,6 @@
 }
 .heading{
     font-size: 50px;
-    text-decoration: underline;
     text-align: center;
     width: bold;
     color: rgba(213, 68, 15, 0.595);
@@ -109,3 +108,10 @@
     outline: none;
     
   }
+  .notfound-container{
+    text-align: center;
+    margin: auto;
+    
+  }
+
+  
