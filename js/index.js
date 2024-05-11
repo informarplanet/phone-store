@@ -106,4 +106,6 @@ const handleShowdetails=async(id)=>{
     my_modal_3.showModal()
 }
 
-
+document.getElementById('bth').addEventListener('click',()=>{
+    location.href='index.html'
+})
